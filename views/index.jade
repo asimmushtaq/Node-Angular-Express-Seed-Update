@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  div(ng-controller='AppCtrl')
+  h1= title
+  p Welcome to #{title}
+
+    h2 Hello {{name}}
+    ul.menu
+      li
+        a(href='view1') view1
+      li
+        a(href='view2') view2
+
+    div(ng-view)
+
+    div
+      | Cafe App in Progress
+      span(app-version)
+
+  script(src='javascripts/angular/angular.js')
+  script(src='javascripts/app.js')
+  script(src='javascripts/services.js')
+  script(src='javascripts/controllers.js')
+  script(src='javascripts/filters.js')
+  script(src='javascripts/directives.js')
